@@ -20,10 +20,10 @@ Exemplo de automação com Cypress e cucumber, focado em alguns critérios de ac
 Via terminal, rode os seguintes comandos:
 
 ````
-git clone https://github.com/fabiocaraujo/bootcamp-bdd-cy-google.git
+git clone https://github.com/fabiocaraujo/template-cy-cucumber.git
 ````
 ````
-cd bootcamp-bdd-cy-google
+cd template-cy-cucumber
 ````
 
 Para instalar as dependências:
