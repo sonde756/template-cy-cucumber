@@ -10,7 +10,23 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+ Cypress.Commands.add('login', (email, password) => { 
+    cy.get('[data-testid="email"]').clear().type(email)
+    cy.get('[data-testid="senha"]').clear().type(password)
+    cy.get('[data-testid="entrar"]').click()
+});
+
+
+Cypress.Commands.add('cadastroProduto', (nome, preco, descricao, quantidade) => { 
+    cy.visit('admin/cadastrarprodutos')
+    cy.get('[data-testid="nome"]').clear().type(nome)
+    cy.get('[data-testid="preco"]').clear().type(preco)
+    cy.get('[data-testid="descricao"]').clear().type(descricao)
+    cy.get('[data-testid="quantity"]').clear().type(quantidade)
+    cy.get('[data-testid="cadastarProdutos"]').click()
+    
+});
+
 //
 //
 // -- This is a child command --

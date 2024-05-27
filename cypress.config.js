@@ -7,11 +7,11 @@ async function setupNodeEvents(on, config) {
   on("file:preprocessor", browserify.default(config));
   return config;
 }
-
 module.exports = defineConfig({
   e2e: {
     specPattern: "**/*.feature",
     supportFile: 'cypress/support/e2e.js',
     setupNodeEvents,
+    baseUrl: 'https://front.serverest.dev/'
   },
 });
